@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="lomi.list">
+      <field name="name">lomi list</field>
+      <field name="model">lomi.lomi</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="lomi.action_window">
+      <field name="name">lomi window</field>
+      <field name="res_model">lomi.lomi</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="lomi.action_server">
+      <field name="name">lomi server</field>
+      <field name="model_id" ref="model_lomi_lomi"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="lomi" id="lomi.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="lomi.menu_1" parent="lomi.menu_root"/>
+    <menuitem name="Menu 2" id="lomi.menu_2" parent="lomi.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="lomi.menu_1_list" parent="lomi.menu_1"
+              action="lomi.action_window"/>
+    <menuitem name="Server to list" id="lomi" parent="lomi.menu_2"
+              action="lomi.action_server"/>
+-->
+  </data>
+</odoo>
